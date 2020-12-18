@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/addressBook_form.css">
+    <title>Address Book Form</title>
+    <link rel="shortcut icon" href="../assets/images/fav.jpg" type = "image/x-icon">
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/addressbook.jpeg" alt="">
+            <div>
+                <span class="person-text">ADDRESS</span><br>
+                <span class="person-text address-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+    <div id="formId" class="form-content">
+        <form id="form" class="form" action="#" onreset="resetForm()" onsubmit="saveForm()">
+            <div class="form-head">
+                <div class="form-text">PERSON ADDRESS FORM</div>
+                <div>
+                    <a href="../pages/addressBook_home.html"><img class="cancel-button" src="../assets/images/cancel.jpeg" alt="cancel"></a>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="name">Full Name</label>
+                <input class="input" id="name" name="name" type="text" required/>
+                <error-output class="text-error" for="name"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="phoneNum">Phone Number</label>
+                <input class="input" id="phoneNum" name="phoneNum" type="text" required>
+                <error-output class="phoneNum-error" for="phoneNum"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="address">Address</label>
+                <textarea class="input" id="address" name="address" placeholder="" style="height: 50px;"> </textarea>
+                <error-output class="address-error" for="address"></error-output>
+            </div>
+            <div class="select-box">
+                <div name="city" id="city" class="city">
+                    <label for="city" class="label text">City</label>
+                    <select class="select" name="city" id="city">
+                        <option selected disabled>Select City</option>
+                        <option value="Hyd">Hyderabad</option>
+                        <option value="Chn">Chennai</option>
+                        <option value="Blr">Bangalore</option>
+                        <option value="Vja">Vijayawada</option>
+                        <option value="Del">Delhi</option>
+                    </select>
+                </div>
+                <div name="state" id="state" class="state">
+                    <label for="state" class="label text">State</label>
+                    <select class="select" name="state" id="state">
+                        <option selected disabled>Select State</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="TS">Telangana</option>
+                        <option value="DL">Delhi</option>
+                    </select>
+                </div>
+                <div name="zip" id="zip" class="zip">
+                    <label for="zip" class="label text">Zip Code</label>
+                    <input class="select" type="text" name="zip" id="zip">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
