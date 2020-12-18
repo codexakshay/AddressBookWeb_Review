@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/addressBook_form.css">
+    <title>Address Book Form</title>
+    <link rel="shortcut icon" href="../assets/images/fav.jpg" type = "image/x-icon">
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/addressbook.jpeg" alt="">
+            <div>
+                <span class="person-text">ADDRESS</span><br>
+                <span class="person-text address-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+    <div id="formId" class="form-content">
+        <form id="form" class="form" action="#" onreset="resetForm()" onsubmit="saveForm(event)">
+            <div class="form-head">
+                <div class="form-text">PERSON ADDRESS FORM</div>
+                <div>
+                    <a href="../pages/addressBook_home.html"><img class="cancel-button" src="../assets/images/cancel.jpeg" alt="cancel"></a>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="name">Full Name</label>
+                <input class="input" id="name" name="name" type="text" required/>
+                <error-output class="text-error" for="name"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="phoneNum">Phone Number</label>
+                <input class="input" id="phoneNum" name="phoneNum" type="text" required>
+                <error-output class="phoneNum-error" for="phoneNum"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="address">Address</label>
+                <textarea class="input" id="address" name="address" placeholder="" style="height: 50px;"> </textarea>
+                <error-output class="address-error" for="address"></error-output>
+            </div>
+            <div class="select-box">
+                <div>
+                    <label for="city" class="label text">City</label>
+                    <select class="select" name="city" id="City">
+                        <option selected disabled hidden>Select City</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Vijayawada">Vijayawada</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Jalandhar">Jalandhar</option>
+                        <option value="Ludhiana">Ludhiana</option>
+                        <option value="Guntur">Guntur</option>
+                        <option value="Warangal">Warangal</option>
+                        <option value="Tirupathi">Tirupathi</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="state" class="label text">State</label>
+                    <select class="select" name="state" id="State">
+                        <option selected disabled>Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chattisgarh">Chattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerela">Kerela</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="zip" class="label text">Zip Code</label>
+                    <input class="select" type="text" name="zip" id="Zip">
+                </div>
+            </div>
+            <div class="buttonParent">
+                <div class="submit-reset">
+                    <button class="submitButton button" type="submit" id="submit">Add</button>
+                    <button class="resetButton button" type="reset" id="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../js/addressBook.js"></script>
+    <script src="../js/addressBook_form.js"></script>
+    <script src="../js/site_properties.js"></script>
+</body>
+</html>
